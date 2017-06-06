@@ -5,3 +5,11 @@ export const fetchPhotos= () => {
     url: 'api/photos'
   })
 }
+
+export const addPhoto= (photo) => {
+  return $.ajax({
+    method: 'POST' ,
+    url: 'api/photos',
+    photo
+  })
+}
