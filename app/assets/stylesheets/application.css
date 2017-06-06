@@ -29,7 +29,7 @@
    vertical-align: inherit;
    color: inherit;
    background: transparent;
-   font-family: 'Roboto', sans-serif;
+   font-family: Helvetica,'Roboto', sans-serif;
  }
 
 
@@ -78,7 +78,11 @@
     border: 1px solid #e6e6e6;
 }
 
+/*username link*/
 
+.username-link {
+  font-weight: 800;
+}
 /*feed*/
 .photo-index {
   margin: 0 0 50px;
@@ -86,6 +90,21 @@
   background: #ffffff;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
+}
+.feed > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .user-info {
   display: -webkit-box;
@@ -102,6 +121,13 @@
 }
 .user-info .info {
   margin: 0 15px 0 0;
+  vertical-align: middle;
+}
+.user-info .info img {
+  margin-right: 10px;
+}
+.user-info .info img {
+  margin-right: 10px;
 }
 .feed {
   padding-top: 100px;
