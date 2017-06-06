@@ -36,31 +36,43 @@
 
 /*Navigation bar*/
 .navbar {
-  /*position: fixed;*/
+  position: fixed;
+  border-bottom: 1px solid #ededed;
+  width: 100%;
 }
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 5px 12%;
     overflow: hidden;
-    background-color: #ededed;
+    background-color: #ffffff;
+}
+
+.navbar .left {
+    float: left;
+}
+.navbar .right {
+    float: right;
 }
 
 .navbar li {
-    float: left;
+  float: left
 }
 
 .navbar li a {
     display: block;
-    color: white;
+    color: #262626;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .navbar li a:hover {
-    background-color: #111;
+    background-color: #ededed;
 }
 .navbar img {
-    max-width: 30px;
+    max-height: 40px;
+}
+.navbar .prof {
+    border-radius: 10px;
 }
