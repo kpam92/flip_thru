@@ -15,11 +15,13 @@ class PhotoIndexItem extends React.Component {
   render() {
     const { image_url, user_pic, username, description } = this.props.photo;
     return (
-      <div>
-        <div className="user_info">
-          <img src={user_pic}/>
-          <span>{username}</span>
-        </div>
+      <div className='photo-index'>
+        <header className="user-info">
+          <div className='info'>
+            <img src={user_pic}/>
+            <span>{username}</span>
+          </div>
+        </header>
         <div className='feed-photo'>
           <img src={image_url}/>
         </div>

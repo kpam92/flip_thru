@@ -74,12 +74,43 @@
     max-height: 40px;
 }
 .navbar .prof {
-    border-radius: 10px;
+    border-radius: 20px;
+    border: 1px solid #e6e6e6;
 }
 
 
 /*feed*/
-
+.photo-index {
+  margin: 0 0 50px;
+  max-width: 600px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+.user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.user-info .info {
+  margin: 0 15px 0 0;
+}
 .feed {
   padding-top: 100px;
+}
+.user-info img {
+  max-height: 40px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+}
+.feed-photo img {
+  max-width: 600px;
 }
