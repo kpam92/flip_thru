@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PhotoIndexItem from './photo_index';
 class Feed extends React.Component {
   constructor(props){
     super(props)
@@ -12,8 +12,7 @@ class Feed extends React.Component {
   render() {
     const { photos } = this.props;
     const photoDetails = photos.map(photo => (
-        <li key={photo.id}>{photo.description}<img src={photo.image_url}/></li>
-
+        <PhotoIndexItem key={photo.id} photo={photo}/>
       )
     );
     // const locationIndexDetails = this.props.locations.map(location => (
@@ -24,7 +23,7 @@ class Feed extends React.Component {
     //   )
     // );
     return(
-      <div>
+      <div className='feed'>
        <ul>
          {photoDetails}
        </ul>

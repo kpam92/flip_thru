@@ -18,7 +18,7 @@ class Api::PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
   end
-  
+
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
@@ -27,7 +27,7 @@ class Api::PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:image_url, :description, :author_id)
+    params.require(:photo).permit(:image_url, :description, :author_id, :user_pic, :username)
   end
 
 end
