@@ -12,18 +12,12 @@ class Feed extends React.Component {
   }
 
   render() {
-    const { photos } = this.props;
+    const { photos, fetchUser } = this.props;
     const photoDetails = photos.map(photo => (
-        <PhotoIndexItem key={photo.id} photo={photo}/>
+        <PhotoIndexItem key={photo.id} photo={photo} fetchUser={fetchUser}/>
       )
     );
-    // const locationIndexDetails = this.props.locations.map(location => (
-    //   <IndexItem
-    //     location={location}
-    //     key={location.id}
-    //   />
-    //   )
-    // );
+
     return(
       <div className='feed'>
        <ul>

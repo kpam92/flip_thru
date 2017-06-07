@@ -6,34 +6,31 @@ import { fetchUser } from '../../util/user_api_util';
 class Feed extends React.Component {
   constructor(props){
     super(props)
+    this.photoDetails = []
   }
 
   componentWillMount() {
-    // console.log(lala)
     this.props.fetchUser(this.props.match.params.userId)
-    // const user = fetchUser(this.props.match.params.userId).then(suc => suc.photos.map(photo => (
-    //     return photo.image_url
-    //   )
-    // ))
-    // console.log(user)
+  }
+  componentDidMount(){
+    this.props.fetchUser(this.props.match.params.userId)
+  }
+
+  componentWillReceiveProps(props){
+    const { photos } = props.user;
+    this.photoDetails = photos.map(photo => (
+        <PhotoIndexItem key={photo.id} photo={photo}/>
+      )
+    );
 
   }
 
   render() {
-    // const user = fetchUser(this.props.match.params.userId).then(suc => suc.photos.map(photo => (
-    //     <PhotoIndexItem key={photo.id} photo={photo}/>
-    //   )
-    // ))
-    // const { photos } = this.props.user;
-    // const photoDetails = user.photos.map(photo => (
-    //     <PhotoIndexItem key={photo.id} photo={photo}/>
-    //   )
-    // );
     return(
       <div className='feed'>
        <ul>
          this is the profile talking
-         {}
+         {this.photoDetails}
        </ul>
      </div>
     )

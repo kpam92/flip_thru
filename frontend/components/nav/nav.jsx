@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 class Nav extends React.Component {
   constructor(props){
     super(props)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
+  }
+
+  handleClick() {
+    this.props.fetchUser(2);
+    this.props.history.push(`/user/2`);
   }
 
   render() {
@@ -27,9 +33,9 @@ class Nav extends React.Component {
                </a>
              </li>
              <li>
-               <Link to={`/user/2`}>
+               <a onClick={this.handleClick}>
                  <img className='prof' src="http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg"/>
-               </Link>
+               </a>
              </li>
            </div>
          </ul>
@@ -38,4 +44,4 @@ class Nav extends React.Component {
   }
 };
 
-export default Nav;
+export default withRouter(Nav);

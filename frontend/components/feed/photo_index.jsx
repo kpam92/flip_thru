@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { withRouter } from 'react-router-dom';
+
 class PhotoIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -8,8 +10,10 @@ class PhotoIndexItem extends React.Component {
   }
 
   handleClick() {
+    // debugger;
     const profileId = this.props.photo.author_id;
-    this.props.history.push(`/profile/${profileId}`);
+    // this.props.fetchUser(profileId);
+    this.props.history.push(`/user/${profileId}`);
   }
 
   render() {
@@ -18,10 +22,10 @@ class PhotoIndexItem extends React.Component {
       <div className='photo-index'>
         <header className="user-info">
           <div className='info'>
-            <Link to={`/user/${author_id}`} className='username-link'>
+            <div className='username-link' onClick={this.handleClick}>
               <img src={user_pic}/>
               {username}
-            </Link>
+            </div>
           </div>
         </header>
         <div className='feed-photo'>
@@ -35,4 +39,4 @@ class PhotoIndexItem extends React.Component {
   }
 }
 
-export default (PhotoIndexItem);
+export default withRouter(PhotoIndexItem);
