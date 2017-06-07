@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
 import Profile from './profile';
 
-const mapStateToProps = (state, { match }) => {
-  userId: parseInt(match.params.userId);
-  photos: state.user.photos
+const mapStateToProps = (state) => {
+  
 };
 
 const mapDispatchToProps = dispatch => ({

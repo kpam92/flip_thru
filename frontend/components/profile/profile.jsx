@@ -5,11 +5,13 @@ class Feed extends React.Component {
     super(props)
   }
 
-  componentWillMount() {
-    this.props.fetchUser(this.props.userId)
+  componentDidMount() {
+    this.props.fetchUser(this.props.match.params.userId)
   }
 
   render() {
+    // console.log(this.props)
+    // debugger;
     // const { photos } = this.props;
     // const photoDetails = photos.map(photo => (
     //     <PhotoIndexItem key={photo.id} photo={photo}/>
@@ -19,7 +21,7 @@ class Feed extends React.Component {
     return(
       <div className='feed'>
        <ul>
-         hi
+         this is the profile talking
        </ul>
      </div>
     )
