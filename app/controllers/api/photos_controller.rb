@@ -1,7 +1,7 @@
 class Api::PhotosController < ApplicationController
 
   def index
-    @photos = Photo.all
+    @photos = Photo.all.order('created_at ASC')
   end
 
   def create

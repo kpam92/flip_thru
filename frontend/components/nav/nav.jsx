@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Nav extends React.Component {
   constructor(props){
@@ -26,9 +27,9 @@ class Nav extends React.Component {
                </a>
              </li>
              <li>
-               <a href="#">
+               <Link to={`/user/2`}>
                  <img className='prof' src="http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg"/>
-               </a>
+               </Link>
              </li>
            </div>
          </ul>
