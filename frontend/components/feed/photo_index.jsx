@@ -18,8 +18,10 @@ class PhotoIndexItem extends React.Component {
       <div className='photo-index'>
         <header className="user-info">
           <div className='info'>
-            <img src={user_pic}/>
-            <a className='username-link' href='#'>{username}</a>
+            <a className='username-link' href='#'>
+              <img src={user_pic}/>
+              {username}
+            </a>
           </div>
         </header>
         <div className='feed-photo'>
