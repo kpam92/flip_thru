@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import PhotoIndexItem from './photo_index';
 class Feed extends React.Component {
   constructor(props){
@@ -32,4 +34,4 @@ class Feed extends React.Component {
   }
 };
 
-export default Feed;
+export default withRouter(Feed);

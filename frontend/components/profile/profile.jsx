@@ -10,10 +10,8 @@ class Feed extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
-    // debugger;
-    // const { photos } = this.props;
-    // const photoDetails = photos.map(photo => (
+    // const { photos } = this.props.user;
+    // const photoDetails = this.props.userphotos.map(photo => (
     //     <PhotoIndexItem key={photo.id} photo={photo}/>
     //   )
     // );
