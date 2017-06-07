@@ -13,8 +13,9 @@ class App extends React.Component {
         <NavContainer />
 
         <Switch>
-          <Route path="/" component={FeedContainer} />
           <Route path="/user/:userId" component={ProfileContainer} />
+          <Route path="/" component={FeedContainer} />
+
         </Switch>
 
       </div>

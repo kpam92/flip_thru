@@ -5,7 +5,7 @@ class Feed extends React.Component {
     super(props)
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchUser(this.props.userId)
   }
 
