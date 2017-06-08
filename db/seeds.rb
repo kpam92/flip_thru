@@ -25,11 +25,11 @@ Photo.create!(description:"Vanessa with flowers",username:"SallyMander",
              author_id:3, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472938130/12308595_10153376057065889_205887642227916082_n_iqbgzf.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1472768971/stephen_9010-2_rti9cb.jpg")
 
-Photo.create!(description:"Group Photo",username:"Kpam", description:"2016 team",
+Photo.create!(description:"Group Photo",username:"Kpam",
              author_id:2, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472944078/14089309_10154002731713893_2435401364054337428_n_cbnt2m.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/c_scale,h_814/v1472767620/a1_g7gv2m.jpg")
 
-Photo.create!(description:"kevin",username:"Kpam", description:"man and dog",
+Photo.create!(description:"kevin",username:"Kpam",
              author_id:2, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472944078/14089309_10154002731713893_2435401364054337428_n_cbnt2m.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1472746902/_MG_8090_kcryvq.jpg")
 
@@ -108,15 +108,6 @@ Photo.create!(description:"Unconditional Love",username:"Kpam",
 Photo.create!(description:"Graduation",username:"Kpam",
              author_id:2, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472944078/14089309_10154002731713893_2435401364054337428_n_cbnt2m.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/c_scale,h_1052/v1473437458/grad_arucmt.jpg")
-
-Photo.create!(description:"Kelcey",username:"Kpam",
-             author_id:2, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472944078/14089309_10154002731713893_2435401364054337428_n_cbnt2m.jpg',
-             image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/c_scale,h_900/v1473198970/kelcey2_zw6fxd.jpg")
-
-Photo.create!(description:"Jackie",username:"Kpam",
-             author_id:2, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472944078/14089309_10154002731713893_2435401364054337428_n_cbnt2m.jpg',
-             image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/c_scale,h_976/v1473198991/jac1_guias2.jpg")
-
 
 Photo.create!(description:"Temple in Thailand",username:"user1",
              author_id:1, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg',

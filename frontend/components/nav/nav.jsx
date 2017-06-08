@@ -11,8 +11,8 @@ class Nav extends React.Component {
   }
 
   handleClick() {
-    this.props.fetchUser(2);
-    this.props.history.push(`/user/2`);
+    this.props.fetchUser(1);
+    this.props.history.push(`/user/1`);
   }
 
   render() {
