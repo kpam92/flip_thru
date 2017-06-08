@@ -10,11 +10,12 @@ class Feed extends React.Component {
     this.photoDetails = []
   }
 
-  componentWillMount() {
-    this.props.fetchUser(this.props.match.params.userId)
-  }
   componentDidMount(){
     this.props.fetchUser(this.props.match.params.userId)
+  }
+
+  componentWillUnmount(){
+    this.props.removeUser();
   }
 
   componentWillReceiveProps(props){

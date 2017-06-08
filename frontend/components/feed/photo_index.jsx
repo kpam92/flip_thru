@@ -10,9 +10,7 @@ class PhotoIndexItem extends React.Component {
   }
 
   handleClick() {
-    // debugger;
     const profileId = this.props.photo.author_id;
-    // this.props.fetchUser(profileId);
     this.props.history.push(`/user/${profileId}`);
   }
 

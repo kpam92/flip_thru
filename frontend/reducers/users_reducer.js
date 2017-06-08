@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_USER } from '../actions/user_actions';
+import { RECEIVE_USER,REMOVE_USER } from '../actions/user_actions';
 
 const UsersReducer = (state = {}, action) => {
   Object.freeze(state)
@@ -9,6 +9,8 @@ const UsersReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_USER:
       return action.user;
+    case REMOVE_USER:
+      return {};
     default:
       return state;
   }
