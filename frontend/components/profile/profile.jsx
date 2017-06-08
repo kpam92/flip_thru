@@ -26,12 +26,24 @@ class Feed extends React.Component {
   }
 
   render() {
+    const { user } = this.props
     return(
-      <div className='feed'>
-       <ul>
-         this is the profile talking
-         {this.photoDetails}
-       </ul>
+      <div className='profile'>
+        <div className='prof-container'>
+          <div className='prof-header'>
+            <div className='prof-pic'>
+              <img src={user.profile_pic}/>
+            </div>
+            <div className='prof-info'>
+              <div className='user-title'>
+                {user.username}
+              </div>
+            </div>
+          </div>
+         <ul>
+           {this.photoDetails}
+         </ul>
+       </div>
      </div>
     )
   }
