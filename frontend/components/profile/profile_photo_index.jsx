@@ -12,14 +12,14 @@ class ProfilePhotoIndex extends React.Component {
 
     const content = photos.map((photo) => (
       <li key={`photo-${photo.id}`}>
-        <button
+        <div
           className="image-button"
         >
           <img
             src={photo.image_url}
             alt={`photo-${photo.id}`}
           />
-        </button>
+        </div>
       </li>
     ));
 

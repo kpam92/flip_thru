@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoIndexItem from '../feed/photo_index';
+import ProfilePhotoIndex from './profile_photo_index';
 
 import { fetchUser } from '../../util/user_api_util';
 
@@ -18,10 +19,7 @@ class Feed extends React.Component {
 
   componentWillReceiveProps(props){
     const { photos } = props.user;
-    this.photoDetails = photos.map(photo => (
-        <PhotoIndexItem key={photo.id} photo={photo}/>
-      )
-    );
+    this.photoDetails = photos;
 
   }
 
@@ -41,7 +39,7 @@ class Feed extends React.Component {
             </div>
           </div>
          <ul>
-           {this.photoDetails}
+           <ProfilePhotoIndex photos={this.photoDetails}/>
          </ul>
        </div>
      </div>
