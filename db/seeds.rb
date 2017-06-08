@@ -57,21 +57,17 @@ Photo.create!(description:"Self-Portrait",username:"user1",
              author_id:1, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1475643434/Screen_Shot_2016-10-04_at_9.48.43_PM_e1zcgt.png")
 
-Photo.create!(description:"Wilting Flower",username:"Collage",
+Photo.create!(description:"Wilting Flower",username:"Vyuric",
              author_id:4, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436799/static1.squarespace-3_iyeesy.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436073/Screen_Shot_2016-09-09_at_8.38.35_AM_yx5igi.png")
 
-Photo.create!(description:"Lucky Snake",username:"Collage",
+Photo.create!(description:"Lucky Snake",username:"Vyuric",
              author_id:4, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436799/static1.squarespace-3_iyeesy.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436076/Screen_Shot_2016-09-09_at_8.38.51_AM_vzb003.png")
 
 Photo.create!(description:"Tru luv",username:"Vyuric",
              author_id:4, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436799/static1.squarespace-3_iyeesy.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436063/static1.squarespace-2_v4hnf6.jpg")
-
-Photo.create!(description:"Undescriptiond Sculpture",username:"Vyuric",
-             author_id:4, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436799/static1.squarespace-3_iyeesy.jpg',
-             image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1473436130/VYC_w6kgxx.jpg")
 
 Photo.create!(description:"Willie & Jasmine",username:"user1",
              author_id:1, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg',
