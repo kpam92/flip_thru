@@ -39,10 +39,6 @@ Photo.create!(description:"Kiyomi in the Desert",username:"SallyMander",
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1473181575/IMG_0429_copy_luhghh.jpg")
 
 
-Photo.create!(description:"Stephen with Ceramic",username:"SallyMander",
-             author_id:3, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472938130/12308595_10153376057065889_205887642227916082_n_iqbgzf.jpg',
-             image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1473181573/stephen_ceramic_f6mno4.jpg")
-
 
 Photo.create!(description:"Strength",username:"SallyMander",
              author_id:3, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472938130/12308595_10153376057065889_205887642227916082_n_iqbgzf.jpg',
