@@ -8,8 +8,12 @@
 
 User.destroy_all
 Photo.destroy_all
+Like.destroy_all
+Comment.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('photos')
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('likes')
+ActiveRecord::Base.connection.reset_pk_sequence!('comments')
 
 User.create!(username: 'user1', profile_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg')
 User.create!(username: 'Kpam', profile_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1472944078/14089309_10154002731713893_2435401364054337428_n_cbnt2m.jpg')
@@ -116,3 +120,7 @@ Photo.create!(description:"Mission Peak View",username:"user1",
 Photo.create!(description:"Conchita",username:"user1",
              author_id:1, user_pic: 'http://res.cloudinary.com/dt5viyxyq/image/upload/v1475112850/1536648_10153300643313893_2943769392509528369_n_ymqsol.jpg',
              image_url:"http://res.cloudinary.com/dt5viyxyq/image/upload/v1475645083/Screen_Shot_2016-10-04_at_10.12.59_PM_sxf7oc.png")
+
+
+Like.create!(author_id:1, photo_id:1)
+Like.create!(author_id:1, photo_id:2)
