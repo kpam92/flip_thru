@@ -12,9 +12,9 @@ class Feed extends React.Component {
   }
 
   render() {
-    const { photos, fetchUser } = this.props;
+    const { photos, addLike, destroyLike } = this.props;
     const photoDetails = photos.map(photo => (
-        <PhotoIndexItem key={photo.id} photo={photo} fetchUser={fetchUser}/>
+        <PhotoIndexItem key={photo.id} photo={photo} destroyLike={destroyLike} addLike={addLike}/>
       )
     );
 

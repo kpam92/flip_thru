@@ -89,6 +89,22 @@
   cursor: pointer;
 }
 /*feed*/
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  /*background-image: url('http://res.cloudinary.com/dt5viyxyq/image/upload/v1497047022/iconmonstr-favorite-8-240_q87skd.png');*/
+}
+
+.unliked {
+  background-image: url('http://res.cloudinary.com/dt5viyxyq/image/upload/v1497047022/iconmonstr-favorite-8-240_q87skd.png');
+}
+
+.liked {
+  background-image: url('http://res.cloudinary.com/dt5viyxyq/image/upload/v1497047045/iconmonstr-favorite-7-240_bt0dkx.png');
+}
+
 .photo-index {
   margin: 0 0 50px;
   max-width: 600px;

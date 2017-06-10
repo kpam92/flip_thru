@@ -15,7 +15,6 @@ const PhotosReducer = (state = {}, action) => {
       return merge({}, state, newPhoto);
     case UPDATE_PHOTO:
     newState[action.photo.id - 1]= action.photo
-    debugger;
       return newState
     case DELETE_LIKE:
       newState = {[action.like.author_id]: action.photo};

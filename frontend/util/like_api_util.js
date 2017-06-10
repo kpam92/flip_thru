@@ -3,7 +3,7 @@ export const addLike= (like) => {
   return $.ajax({
     method: 'POST' ,
     url: '/api/likes',
-    like
+    data: {like: like}
   })
 }
 

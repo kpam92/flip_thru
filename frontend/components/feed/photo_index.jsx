@@ -7,6 +7,8 @@ class PhotoIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleLikeClick = this.handleLikeClick.bind(this);
+    this.state = { condition: this.props.photo.likes[1] === undefined ? ' unliked' : ' liked'}
   }
 
   handleClick() {
@@ -14,8 +16,19 @@ class PhotoIndexItem extends React.Component {
     this.props.history.push(`/user/${profileId}`);
   }
 
+  handleLikeClick(){
+    if (this.state['condition'] === ' liked'){
+      this.props.destroyLike(this.props.photo.likes[1][0])
+      this.setState({ condition: ' unliked'})
+    } else {
+      this.props.addLike({"author_id": 1, "photo_id": this.props.photo.id})
+      this.setState({ condition: ' liked'})
+    }
+  }
+
   render() {
-    const { image_url, user_pic, username, description, author_id } = this.props.photo;
+    const { image_url, user_pic, username, description, author_id, likes } = this.props.photo;
+    // const condition = this.state['condition'] === undefined ? ' unliked' : ' liked'
     return (
       <div className='photo-index'>
         <header className="user-info">
@@ -30,6 +43,7 @@ class PhotoIndexItem extends React.Component {
           <img src={image_url}/>
         </div>
         <div className="user-info">
+          <div className={'heart' + this.state['condition']} onClick={this.handleLikeClick}/>
           <span>{description}</span>
         </div>
       </div>
