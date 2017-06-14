@@ -1,6 +1,6 @@
-# Invoice Editor
+# FlipThru
 
-[Invoice Editor live][host]
+[FlipThru Live[host]
 
 [host]: http://flipthru.herokuapp.com
 
@@ -36,25 +36,25 @@ FlipThru is a single page full-stack application, showcasing UI/UX certain UI/UX
 
 Photos consist of an "image_url", "description", and "author_id". Because every photo displayed on the feed is accompanied by the author's profile_pic and username, the database tables where then denormalized to avoid excessive querying, and each photo contains both "user_pic" and "username".
 
-```javascript
-const examplePhotoState = {
-1: {
-  image_url: 'https://www.example.com/image3',
-  description: 'skydiving',
-  user_pic: 'https://www.example.com/image1',
-  username: 'user1'
-  }
-};
-```
+  ```javascript
+  const examplePhotoState = {
+  1: {
+    image_url: 'https://www.example.com/image3',
+    description: 'skydiving',
+    user_pic: 'https://www.example.com/image1',
+    username: 'user1'
+    }
+  };
+  ```
 When a user is fetched from the database and placed in state to show their profile, the jbuilder view also fetches all the user's photos through a partial. This makes it more accessible in the user state to extrapolate all photos to display.
 
-```javascript
-json.extract! user, :id, :username, :profile_pic
+  ```javascript
+  json.extract! user, :id, :username, :profile_pic
 
-json.photos do
-  json.partial! 'api/photos/photo', collection: user.photos, as: :photo
-end
-```
+  json.photos do
+    json.partial! 'api/photos/photo', collection: user.photos, as: :photo
+  end
+  ```
 
 The `TotalAmount` component renders each variable above, and state changes through actions involving item creation,edit, and deletion.
 
