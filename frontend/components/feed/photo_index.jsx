@@ -18,9 +18,11 @@ class PhotoIndexItem extends React.Component {
 
   handleLikeClick(){
     if (this.state['condition'] === ' liked'){
+      debugger;
       this.props.destroyLike(this.props.photo.likes[1][0])
       this.setState({ condition: ' unliked'})
     } else {
+      debugger;
       this.props.addLike({"author_id": 1, "photo_id": this.props.photo.id})
       this.setState({ condition: ' liked'})
     }
