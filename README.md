@@ -56,32 +56,11 @@ When a user is fetched from the database and placed in state to show their profi
   end
   ```
 
-The `TotalAmount` component renders each variable above, and state changes through actions involving item creation,edit, and deletion.
-
-## Actions
-  The actions below occur when the user creates, edits, and deletes items.
-
 ### Likes
 
-  Items have three actions, receiveItem(item), updateItem(item), and removeItem(item_id). Each of these, except removeItem, takes an entire item as an argument, and either adds it to state, or updates its existing copy. removeItem finds and deletes the object in state with matching id.
+  Likes have both an 'photo_id' and 'author_id'.
 
-### Total Amount
-
-  The first action that deals with total amount is changeAmount(oldAmount,newAmount), which takes an old amount, and the new amount. This is called after each of three item actions. the old amount is subtracted from the new amount, and the result is then added to the states subtotal; calculations for the new tax and new grand total follow.
-  ```javascript
-
-  // Used for creating a new item
-  changeAmount(0, 100) // diff = (100 - 0); newState.subTotal += diff
-
-  // Used for deleting an item
-  changeAmount(100, 0) // diff = (0 - 100); newState.subTotal += diff
-
-  // Used for editing an item
-  changeAmount(100,50) // diff = (50 - 100); newState.subTotal += diff
-
-  ```
-
-  The second action, changeTax(tax), takes in a number as an argument, and alters the currTax of the amount state. When this is called after submission of the tax form in the component, it changes the currTax, then calls changeAmount(0,0) to update the other values with the new tax.
+  When the user clicks on the heart icon, it switches the class through a change in the component's state, then triggers an action to either delete or add the like into the database.
 
 ## Future Directions for the Project
 
@@ -91,6 +70,6 @@ I plan to add small adjustments to the project to provide better UX for the user
 
 In process of implementing Jest tests on Redux reducers.
 
-### Save and Edit Invoices
+### Adding and Commenting on Photos
 
-Right now, the user can only create one invoice at a time. In the future, user will be able to save entire invoices and start creating new ones. Tabs of saved invoices will appear on the bottom of the screen, and will be available to be viewed and edited when clicked on.
+This next step in this project is to create comment capabilities on photos, as well as allowing the user to upload through the Cloudinary API.
