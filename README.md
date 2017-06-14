@@ -8,7 +8,7 @@
 FlipThru is a single page full-stack application, showcasing UI/UX certain UI/UX elements of Instagram.
 
 <a href="http://flipthru.herokuapp.com">
-  <img src="https://raw.githubusercontent.com/kpam92/flip_thru/master/app/assets/images/screenshot.png"/>
+  <img style="border:1px solid #ededed" src="https://raw.githubusercontent.com/kpam92/flip_thru/master/app/assets/images/screenshot.png"/>
 </a>
 
 ## Features & Implementation
