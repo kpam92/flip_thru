@@ -1,6 +1,6 @@
 # FlipThru
 
-[FlipThru Live[host]
+[FlipThru Live][host]
 
 [host]: http://flipthru.herokuapp.com
 
