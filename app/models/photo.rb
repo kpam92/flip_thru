@@ -1,3 +1,4 @@
+
 class Photo < ActiveRecord::Base
 
   belongs_to(:author,
@@ -11,4 +12,7 @@ class Photo < ActiveRecord::Base
   has_many(:likes,
              foreign_key: :photo_id,
              class_name: 'Like')
+
+             before_save :verify_valid_age
+
 end
